@@ -18,9 +18,10 @@ a:visited {
 .bgimg {
   background-position: center;
   background-size: cover;
-  background-image: url("Wallpaper.jpg");
-  min-height: 75%;
+  background-image: url("Images/Alina.jpg");
+    height: 200px;
 }
+
 .menu {
   display: none;
 }
@@ -60,59 +61,24 @@ a:visited {
 </div>
 </div>
 </div>
+<br></br>
 <!-- Body of the page -->
-<header class="w3-padding"><p></p>
-<br></br></header>
+
 <div class="w3-container">
-
-  <div class="w3-row">
-    <a href="javascript:void(0)" onclick="openCity(event, 'Ongoing Research');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Ongoing Research</div>
-    </a>
-    <a href="javascript:void(0)" onclick="openCity(event, 'Publications');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Publications</div>
-    </a>
-    <a href="javascript:void(0)" onclick="openCity(event, 'Related info');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Related info</div>
-    </a>
-  </div>
-
-  <div id="Ongoing Research" class="w3-container city" style="display:none">
-      <div class="w3-container">
-
-<div class="w3-block w3-center"> The effect of reputation on political promises  <button onclick="myFunction('Reputation22')" class="w3-button w3-white"><i class="fa fa-caret-down"></i></button></div>
-<div id="Reputation22" class="w3-hide w3-container">
-    <div class="w3-container">
-        <p><b>Abstract:</b></p>
-    </div>
-</div>
-
-<div class="w3-block w3-center"> Media Bias (w/ <a href="#Luis">Luis I. Menéndez</a> and <a href="#Quinti">Sergi Quintana</a>)<button onclick="myFunction('MediaBias22')" class="w3-button w3-white"> <i class="fa fa-caret-down"></i></button></div>
-<div id="MediaBias22" class="w3-hide w3-container">
-    <div class="w3-container">
-        <p><b>Abstract:</b></p>
-    </div>
-</div></button>
-<div class="w3-block w3-center">Twitter (w/<a href="https://www.bgse.uni-bonn.de/en/people/student-directory/2018/miguel-risco-bermejo">Miguel Bermejo)</a><button onclick="myFunction('Twitter22')" class="w3-button w3-white"><i class="fa fa-caret-down"></i></button></div>
-<div id="Twitter22" class="w3-hide w3-container">
-    <div class="w3-container">
-        <p><b>Abstract:</b></p>
-    </div>
-</div></button>
-</div>
     <p></p>
-  </div>
-
-  <div id="Publications" class="w3-container city" style="display:none">
-  </div>
-
-  <div id="Related info" class="w3-container city" style="display:none">
-
-  </div>
 </div>
 
-
-
+<div class="w3-container" align="center">
+          <h5 class="w3-opacity" align="center"><b>European Network for Training in Economic Research</b></h5>
+          <a href="https://www.enter-network.org/"><p></p><img src="Images/ENTER.webp" style="height: 97px" ></img></p></a>
+          <hr>
+        </div>
+<div class="w3-container" align="center">
+          <h5 class="w3-opacity"><b>Barcelona School of Economics Jamboree</b></h5>
+          <a href="https://bse.eu/news/9th-bse-phd-jamboree"><p><img src="Images/bselogo.png"style="height: 200px"></img></p></a>
+          <hr>
+        </div>
+<div class="w3-container">
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-22 w3-small">
   <p><a href="https://www.iae.csic.es/"> Institut d'Anàlisi Economic (IAE)</a></p>
@@ -121,34 +87,7 @@ a:visited {
 </footer>
 
 <script>
-    window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-function acordionfun(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-document.getElementsByClassName("tablink")[0].click();
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className =
-    x.previousElementSibling.className.replace("w3-black", "w3-red");
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.className =
-    x.previousElementSibling.className.replace("w3-red", "w3-black");
-  }
-}
 // Tabbed Menu
-
 function openMenu(evt, menuName) {
   var i, x, tablinks;
   x = document.getElementsByClassName("menu");
@@ -172,19 +111,6 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
-}
-function openCity(evt, cityName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-border-red";
 }
 </script>
 </body>
